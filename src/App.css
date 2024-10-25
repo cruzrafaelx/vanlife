@@ -1,38 +1,110 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 26px;
+  background-color: #FFF7ED;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header img{
+  height: 1.40rem;
+  width: 9rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.links-container *{
+  color: #4D4D4D;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-family: 'Inter', Courier, monospace;
+}
+
+/* Hero */
+
+.hero-container{
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 3rem 2rem;
+  height: 450px;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  color: #FFFFFF;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-container h1, .hero-container p, .hero-container button {
+  position: relative;
+  z-index: 2;
+  font-family: Inter; 
+  text-align: left;
+  margin-bottom: 1.3rem;
+}
+
+.hero-container h1{
+
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 2.625rem;
+
+}
+
+.hero-container p{
+
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.hero-container button{
+  padding: 0.8rem 0 0.8rem 0;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 2rem;
+  background-color: #FF8C38;
+  color: #FFFFFF;
+  font-family: Inter;
+  font-weight: 700;
+  border: none;
+}
+
+/* Footer */
+
+.footer{
+  color: #AAAAAA;
+  background-color: #252525;
+  padding: 1.3rem 0;
+}
+
+.footer p{
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22.92px;
+  text-align: center;
+
 }
