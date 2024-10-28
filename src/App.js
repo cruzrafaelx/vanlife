@@ -40,7 +40,7 @@ function About(){
         <p>Our team is full of vanlife enthusiasts who know firsthand the magic of touring the world on 4 wheels.</p>
         <div className='about-explore-container'>
           <h1>Your destination is waiting. <br/> Your van is ready.</h1>
-          <a>Explore our vans</a>
+          <a href='#'>Explore our vans</a>
         </div>
       </div>
 
