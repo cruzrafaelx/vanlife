@@ -1,10 +1,16 @@
 *{
   box-sizing: border-box;
   margin: 0;
+  
 }
 
-.App {
-  text-align: center;
+body{
+  height: 100%;  
+}
+
+.home, .about{
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -33,11 +39,11 @@
 /* Hero */
 
 .hero-container{
+  flex-grow: 1;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding: 3rem 2rem;
-  height: 450px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -92,6 +98,69 @@
   border: none;
 }
 
+/* about */
+
+.about-container{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  overflow: scroll;
+}
+
+.about-img{
+  width: 100px;
+  margin-bottom: 0;
+}
+
+.about-container h1{
+  font-family: Inter;
+  margin: 0 0 1rem 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: #161616;
+}
+
+.about-container p{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+}
+
+.about-explore-container{
+  margin-top: 2rem;
+  background-color: #FFCC8D;
+  padding: 1.8rem;
+  border-radius: 0.3rem;
+}
+
+.about-explore-container h1{
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: #161616;
+}
+
+.about-explore-container a{
+  font-family: Inter;
+  font-size: 15.95px;
+  font-weight: 700;
+  line-height: 23.92px;
+  background-color: #161616;
+  color: #FFFFFF;
+  padding: 0.7rem 1.5rem;
+  margin-top: 0.3rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+
+}
+
 /* Footer */
 
 .footer{
@@ -107,4 +176,12 @@
   line-height: 22.92px;
   text-align: center;
 
+}
+
+.about-container{
+  height: 100vh;
+}
+
+.about-img{
+  width: 100%;
 }
