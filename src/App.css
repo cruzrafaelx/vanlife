@@ -287,6 +287,50 @@ body{
   align-self: flex-start;
 }
 
+
+/* VanDetails */
+
+.van-details-container{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.van-detail{
+  padding: 36px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: Inter;
+}
+
+.back-link{
+
+  color: #201F1D;
+}
+
+.van-desc{
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  color: #FFFFFF;
+  align-self: start;
+}
+
+.van-det-btn{
+  padding: 0.9rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #FF8C38;
+}
+
 .simple{
   background-color: #E17654;
 }
@@ -297,4 +341,8 @@ body{
 
 .luxury{
   background-color: #161616;
+}
+
+.no-underline{
+  text-decoration: none;
 }

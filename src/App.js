@@ -1,62 +1,29 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import {useState, useEffect} from "react";
+
 import './App.css';
 import './server.js';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Home from './Components/Home';
-import About from './Components/About';
-import Vans from './Components/Vans';
+// import Header from './Pages/Header.jsx';
+// ;
+import Home from './Pages/Home.jsx';
+import About from './Pages/About.jsx';
+import Vans from './Pages/Vans.jsx';
+import VanDetail from './Pages/VanDetail.jsx';
+import Layout from './Components/Layout.jsx';
 
 
 function App() {
 
-
-  //useState to store the van data from mirage server
-  const [vanList, setVanList] = useState([])
-  // const [error, setError] = useState(null)
-
-
-  //useEffect to fetch data from server
-  useEffect(()=> {
-
-    const fetchData = async () => {
-
-      try{
-        const response = await fetch("api/vans")
-        if(!response.ok){
-          throw new Error("Network response was not ok")
-        }
-        const result = await response.json()
-        setVanList(result.vans)
-      }
-
-      catch(error){
-        console.log(error)
-      }
-
-      //you can also add a finally block if you want to add a loading function
-
-    }
-
-    fetchData()
-
-  }, [])
-
-  console.log(vanList)
-
-
-
  
   return (
     <BrowserRouter>
-      <Header/>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/vans" element={<Vans vanList={vanList}/>}></Route>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/vans" element={<Vans />}></Route>
+          <Route path="/vans/:id" element={<VanDetail />}></Route>
+        </Route>
       </Routes>
-      <Footer/>
   </BrowserRouter>
   );
 }
