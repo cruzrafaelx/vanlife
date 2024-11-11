@@ -6,6 +6,7 @@
 
 body{
   height: 100%;  
+  font-family: "Inter";
 }
 
 .home, .about{
@@ -33,7 +34,6 @@ body{
   font-weight: 600;
   margin-left: 1rem;
   cursor: pointer;
-  font-family: 'Inter', Courier, monospace;
 }
 
 /* Hero */
@@ -66,7 +66,6 @@ body{
 .hero-container h1, .hero-container p, .hero-container button {
   position: relative;
   z-index: 2;
-  font-family: Inter; 
   text-align: left;
   margin-bottom: 1.3rem;
 }
@@ -93,7 +92,6 @@ body{
   margin-top: 2rem;
   background-color: #FF8C38;
   color: #FFFFFF;
-  font-family: Inter;
   font-weight: 700;
   border: none;
 }
@@ -113,7 +111,6 @@ body{
 }
 
 .about-container h1{
-  font-family: Inter;
   margin: 0 0 1rem 0;
   font-size: 32px;
   font-weight: 700;
@@ -123,7 +120,6 @@ body{
 }
 
 .about-container p{
-  font-family: Inter;
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -138,7 +134,6 @@ body{
 }
 
 .about-explore-container h1{
-  font-family: Inter;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -147,7 +142,6 @@ body{
 }
 
 .about-explore-container a{
-  font-family: Inter;
   font-size: 15.95px;
   font-weight: 700;
   line-height: 23.92px;
@@ -170,7 +164,6 @@ body{
 }
 
 .footer p{
-  font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   line-height: 22.92px;
@@ -215,13 +208,11 @@ body{
   cursor: pointer;
   background-color: #FFEAD0;
   color: #4D4D4D;
-  font-family: Inter;
   font-size: 1rem;
   font-weight: 500;
 }
 
 .clear-btn{
-  font-family: Inter;
   font-size: 1rem;
   font-weight: 500;
   color: #4D4D4D;
@@ -263,7 +254,6 @@ body{
 }
 
 .van-name{
-  font-family: Inter;
   font-size: 1.2rem;
   font-weight: 600;
   text-align: left;
@@ -271,7 +261,6 @@ body{
 }
 
 .van-price{
-  font-family: Inter;
   font-size: 1rem;
   font-weight: 600;
   text-align: right;
@@ -301,11 +290,9 @@ body{
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  font-family: Inter;
 }
 
 .back-link{
-
   color: #201F1D;
 }
 
@@ -345,4 +332,121 @@ body{
 
 .no-underline{
   text-decoration: none;
+}
+
+.no-bold{
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+/* Host */
+.host-layout{
+  background-color: #FFF7ED;
+}
+
+.host-links{
+  padding: 2rem 1.5rem;
+}
+
+/* a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+} */
+
+.active-link{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Host Van List */
+.host-van-container,
+.host-van-details-container{
+  padding: 0 2rem;
+}
+
+.host-van-list-container{
+  margin-top: 2rem;
+  display: grid;
+}
+
+.host-van-container img{
+  width: 5rem;
+  border-radius: 6px;
+}
+
+.host-van-card{
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 1.3rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  border-radius: 6px;
+}
+
+.host-van-title,
+.host-van-name{
+  color: #161616;
+}
+
+.host-van-title{
+  font-size: 2rem;
+}
+
+.host-van-price{
+  color: #4D4D4D;
+}
+
+/* Host Vans Details */
+
+.host-van-details-container{
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.host-van-details-card{
+  display: flex;
+  gap: 1.5rem;
+  background-color: #FFFFFF;
+  padding: 1.8rem;
+  border-radius: 0.4rem;
+}
+
+.host-van-details-card img{
+  width: 180px;
+  border-radius: 0.4rem;
+}
+
+.host-van-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.van-host-desc-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #FFEAD0;
+  align-self: flex-start;
+}
+
+.van-host-details-links *{
+  
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 2rem;
+  cursor: pointer;
+  color: #4D4D4D;
+  
+}
+
+.van-host-details-links{
+  padding: 0 1.8rem 1.8rem 1.8rem;
+  background-color: #FFFFFF;
 }

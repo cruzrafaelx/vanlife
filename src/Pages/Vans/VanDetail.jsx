@@ -34,13 +34,6 @@ export default function VanDetail() {
         console.log(van)
     },[params.id])
 
-
-
-
-//   if(!van){
-//     return <p>Loading...</p>
-//   }    
-  
   return (
     <div className='van-detail-container'>
     {van ? (

@@ -1,4 +1,6 @@
-import image55 from '../bgImages/image55.png'
+import image55 from '../../bgImages/image55.png'
+
+
 
 export default function About(){
     return(

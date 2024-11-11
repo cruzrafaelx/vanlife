@@ -1,4 +1,4 @@
-import image54 from '../bgImages/image54.png'
+import image54 from '../../bgImages/image54.png'
 
 export default function Home(){
     return(
