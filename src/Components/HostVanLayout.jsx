@@ -1,24 +1,24 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 
 export default function HostVanLayout() {
   return (
     <nav className='host-van-layout'>
         <div className='van-host-details-links'>
             <NavLink 
-                to="/host/vans/:id/details" 
+                to="." 
                 end className={({ isActive }) => `hover ${isActive ? 'active-link' : ''}`}>
-                Details
+                Info
             </NavLink>
 
             <NavLink 
-                to="/host/vans/:id/pricing"  
+                to="pricing"  
                 className={({ isActive }) => `hover ${isActive ? 'active-link' : ''}`}>
                 Pricing
             </NavLink>
 
             <NavLink 
-                to="/host/vans/:id/photos" 
+                to="photos" 
                 className={({ isActive }) => `hover ${isActive ? 'active-link' : ''}`}>
                 Photos
             </NavLink>

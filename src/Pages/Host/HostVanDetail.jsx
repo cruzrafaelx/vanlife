@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { NavLink, Link, useParams } from 'react-router-dom'
+import { NavLink, Link, useParams, Outlet } from 'react-router-dom'
 import { GoArrowLeft } from "react-icons/go";
 import HostVanLayout from '../../Components/HostVanLayout';
 
@@ -48,14 +48,37 @@ export default function HostVansDetail() {
 
   return (
     <div>
-      <Link   to={'/Host/Vans'}
-              className='back-link no-underline'><GoArrowLeft/>Back to all vans
+      <Link   to={".."}
+              relative='path'
+              className='host-van-back-link no-underline'><GoArrowLeft/>Back to all vans
       </Link>
       <div className='host-van-details-container'>
       
         {hostVan}
-        <HostVanLayout/>
+        
+        <div className='host-van-details-links'>
+            <NavLink 
+                to="." 
+                end className={({ isActive }) => `${isActive ? 'active-link' : ''}`}>
+                Info
+            </NavLink>
 
+            <NavLink 
+                to="pricing"  
+                className={({ isActive }) => `${isActive ? 'active-link' : ''}`}>
+                Pricing
+            </NavLink>
+
+            <NavLink 
+                to="photos" 
+                className={({ isActive }) => `${isActive ? 'active-link' : ''}`}>
+                Photos
+            </NavLink>
+        </div>
+
+        <div className='host-van-details-outlet'>
+         {hostVanDetails.length > 0 ? <Outlet context={hostVanDetails}/> : <p>Loading data...</p>} 
+        </div>
       </div>
     </div>
     

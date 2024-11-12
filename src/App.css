@@ -23,6 +23,11 @@ body{
   background-color: #FFF7ED;
 }
 
+.header-links a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .header img{
   height: 1.40rem;
   width: 9rem;
@@ -32,7 +37,7 @@ body{
   color: #4D4D4D;
   text-decoration: none;
   font-weight: 600;
-  margin-left: 1rem;
+  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -348,10 +353,12 @@ body{
   padding: 2rem 1.5rem;
 }
 
-/* a:hover{
+.host-links a:hover{
   text-decoration: underline;
-  font-weight: bold;
-} */
+  font-weight: 700;
+}
+
+
 
 .active-link{
   text-decoration: underline;
@@ -402,8 +409,7 @@ body{
 .host-van-details-container{
   display: flex;
   flex-direction: column;
-  
-
+  margin-top: 2rem;
 }
 
 .host-van-details-card{
@@ -436,7 +442,7 @@ body{
   align-self: flex-start;
 }
 
-.van-host-details-links *{
+.host-van-details-links a{
   
   text-decoration: none;
   font-weight: 600;
@@ -446,7 +452,29 @@ body{
   
 }
 
-.van-host-details-links{
-  padding: 0 1.8rem 1.8rem 1.8rem;
+.host-van-details-links{
+  padding: 0 1.8rem;
   background-color: #FFFFFF;
+}
+
+.host-van-details-links .active-link{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-van-details-links a:hover{
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.host-van-details-outlet{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #FFFFFF;
+}
+
+.host-van-back-link{
+  color: #201F1D;
+  padding: 2rem;
 }
