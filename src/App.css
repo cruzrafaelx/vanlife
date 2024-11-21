@@ -201,8 +201,10 @@ body{
   flex-wrap: wrap;
   width: 80%;
   justify-content: start;
+  align-items: center;
   gap: 1rem;
-  margin-top: 2rem
+  margin-top: 2rem;
+
 }
 
 .filter-btn{
@@ -211,10 +213,28 @@ body{
   width: auto;
   border: none;
   cursor: pointer;
-  background-color: #FFEAD0;
-  color: #4D4D4D;
   font-size: 1rem;
   font-weight: 500;
+  color: #4D4D4D;
+  background-color: #FFEAD0;
+}
+
+.filter-btn.simple:hover, .filter-btn.simple.select{
+  background-color: #E17654;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.filter-btn.rugged:hover, .filter-btn.rugged.select{
+  background-color: #115E59;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.filter-btn.luxury:hover, .filter-btn.luxury.select{
+  background-color: #161616;
+  color: #FFFFFF;
+  transition: 0.3s;
 }
 
 .clear-btn{
@@ -323,17 +343,6 @@ body{
   background-color: #FF8C38;
 }
 
-.simple{
-  background-color: #E17654;
-}
-
-.rugged{
-  background-color: #115E59;
-}
-
-.luxury{
-  background-color: #161616;
-}
 
 .no-underline{
   text-decoration: none;
@@ -477,4 +486,24 @@ body{
 .host-van-back-link{
   color: #201F1D;
   padding: 2rem;
+}
+
+.host-van-info{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.host-van-info-photo{
+  width: 150px;
+  border-radius: 0.4rem;
+}
+
+.host-van-pricing{
+  color: #4D4D4D;
+}
+
+.host-van-pricing span{
+  font-size: 1.7rem;
+  color: #161616;
 }

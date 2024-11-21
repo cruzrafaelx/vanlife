@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useLocation } from 'react-router-dom'
 import { GoArrowLeft } from "react-icons/go";
 
 
@@ -9,7 +9,13 @@ export default function VanDetail() {
     const [van, setVan] = useState(null)
 
     const params = useParams()
-    console.log(params.id)
+    const location = useLocation()
+    
+    //Optional chaining
+    //If there location.state exists, add .search to it. If not, empty string
+    const search = location.state?.search || ""
+
+    console.log(search )
     
     useEffect(()=>{
 
@@ -38,8 +44,11 @@ export default function VanDetail() {
     <div className='van-detail-container'>
     {van ? (
         <div className='van-detail'>
-            <Link   to={'/Vans'}
-                    className='back-link'><GoArrowLeft/>Back to all vans</Link>
+            <Link   to={`..?${search}`}
+                    relative='path'
+                    className='back-link'>
+                    <GoArrowLeft/>Back to all vans
+            </Link>
             <img className='van-img' src={van.imageUrl} alt='a van' ></img>
             <span className={`van-desc ${van.type}`}>{van.type.charAt(0).toUpperCase() + van.type.slice(1)}</span>
             <h1>{van.name}</h1>
